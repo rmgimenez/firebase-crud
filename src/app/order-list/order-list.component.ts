@@ -10,13 +10,16 @@ export class OrderListComponent implements OnInit {
 
   coffeeOrders;
 
-  constructor(private ordersService:OrdersService) { }
+  constructor(private ordersService: OrdersService) { }
 
-  ngOnInit() {this.getCoffeeOrders();}
+  ngOnInit() { this.getCoffeeOrders(); }
 
   getCoffeeOrders = () =>
-      this.ordersService
+    this.ordersService
       .getCoffeeOrders()
-      .subscribe(res =>(this.coffeeOrders = res));
+      .subscribe(res => (this.coffeeOrders = res));
+
+  markCompleted = data =>
+    this.ordersService.updateCoffeeOrder(data);
 
 }
