@@ -24,4 +24,8 @@ export class OrdersService {
         .then(res => { }, err => reject(err));
     });
   }
+
+  getCoffeeOrders() {
+    return this.firestore.collection("coffeeOrders").snapshotChanges();
+  }
 }
