@@ -119,6 +119,14 @@
           }
         }
       }
-    }},
-  "defaultProject": "firebase-crud"
+    }
+  },
+  "defaultProject": "firebase-crud",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      }
+    }
+  }
 }
