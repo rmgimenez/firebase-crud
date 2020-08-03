@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
@@ -13,7 +14,8 @@ import { OrdersService } from './shared/orders.service';
     OrderListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
   ],
   providers: [OrdersService],
   bootstrap: [AppComponent]
